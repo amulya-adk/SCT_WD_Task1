@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  line-height: 1.6;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: #333; /* <-- default visible background */
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  padding: 15px 20px;
+}
+
+.navbar.scrolled {
+  background-color: #00bcd4; /* <-- bright color on scroll */
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: yellow; /* hover color */
+}
+
+section {
+  height: 100vh;
+  padding: 100px 20px 20px 20px;
+  background: #222;
+  color: white;
+  text-align: center;
+}

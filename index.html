@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Responsive Landing Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", sans-serif;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #333;
+      color: white;
+      padding: 15px 0;
+      transition: background-color 0.3s ease;
+      z-index: 1000;
+    }
+
+    header.scrolled {
+      background-color: #00bcd4; /* Change color on scroll */
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      gap: 30px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: yellow;
+    }
+
+    section {
+      height: 100vh;
+      padding-top: 80px;
+      background-color: #222;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <header id="navbar">
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h1>Welcome to the Landing Page</h1>
+    <p>Scroll down to see the navbar color change</p>
+  </section>
+
+  <section id="features">
+    <h2>Features</h2>
+    <p>This is the features section.</p>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>This is the projects section.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: hello@example.com</p>
+  </section>
+
+  <script>
+    const navbar = document.getElementById("navbar");
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  </script>
+
+</body>
+</html>
+  
+    
